@@ -1,41 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using StardewModdingAPI;
-using StardewModdingAPI.Events;
-using StardewValley;
-using StardewValley.Monsters;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using MiniBars.Framework;
-
-namespace MiniBars.Framework
+﻿namespace MiniBars.Framework
 {
-    public class Database
+    internal class Database
     {
-        public static string bars_theme;
-        public static int distance_x;
-        public static int bar_size;
+        internal static string BarTheme { get; private set; }
+        internal static int DistanceX { get; private set; }
+        internal static int BarSize { get; private set; }
 
-        public static void GetTheme()
+        public static void SetThemeForConfig()
         {
-            if (ModEntry.config.Bars_Theme == 0)
+            if (ModEntry.config.Bars_Theme == 2)
             {
-                bars_theme = "Normal_Themes";
-                distance_x = 4;
-                bar_size = 20;
-            }
-            else if (ModEntry.config.Bars_Theme == 2)
-            {
-                bars_theme = "Simple_Themes";
-                distance_x = 15;
-                bar_size = 31;
+                BarTheme = "Simple_Themes";
+                DistanceX = 15;
+                BarSize = 31;
             }
             else
             {
-                bars_theme = "Normal_Themes";
-                distance_x = 4;
-                bar_size = 20;
+                BarTheme = "Normal_Themes";
+                DistanceX = 4;
+                BarSize = 20;
             }
         }
     }
