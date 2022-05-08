@@ -8,60 +8,71 @@ namespace MiniBars.Framework.Rendering
 {
     internal class Textures
     {
-        internal static Texture2D hp_sprite;
-        internal static Texture2D default_theme;
-        internal static Texture2D greenslime_theme,
-            blueslime_theme,
-            bat_theme,
-            frostbat_theme,
-            lavabat_theme,
-            bug_theme,
-            cavefly_theme,
-            duggy_theme,
-            grub_theme,
-            rockcrab_theme,
-            lavacrab_theme,
-            stonegolem_theme,
-            dust_theme,
-            ghost_theme,
-            skeleton_theme,
-            metalhead_theme,
-            shadowbrute_theme,
-            shadowshaman_theme,
-            squidkid_theme;
-        internal static Texture2D armoredbug_theme,
-            carbonghost_theme,
-            iridiumbat_theme,
-            iridiumcrab_theme,
-            mummy_theme,
-            pepperrex_theme,
-            serpent_theme;
-        internal static Texture2D hauntedskull_theme;
-        internal static Texture2D mutantfly_theme,
-            mutantgrub_theme;
-        internal static Texture2D wildernessgolem_theme;
-        internal static Texture2D dwarvishsentry_theme,
-            falsemagmacap_theme,
-            hothead_theme,
-            lavalurk_theme,
-            magmaduggy_theme,
-            magmasparker_theme,
-            magmasprite_theme,
-            tigerslime_theme;
-        internal static Texture2D hardmode_bug,
-            hardmode_crab,
-            hardmode_duggy,
-            hardmode_dust,
-            hardmode_frostbat,
-            hardmode_squid,
-            hardmode_putridghost,
-            hardmode_skeleton,
-            hardmode_spider,
-            hardmode_lavacrab,
-            hardmode_metalhead,
-            hardmode_squidkid,
-            hardmode_shadowshaman,
-            hardmode_stickbug;
+        internal static Lazy<Texture2D> hp_sprite { get; private set; }
+        internal static Lazy<Texture2D> default_theme { get; private set; }
+
+        // Monster themes.
+        internal static Lazy<Texture2D> greenslime_theme { get; private set; }
+        internal static Lazy<Texture2D> blueslime_theme { get; private set; }
+        internal static Lazy<Texture2D> bat_theme { get; private set; }
+        internal static Lazy<Texture2D> frostbat_theme { get; private set; }
+        internal static Lazy<Texture2D> lavabat_theme { get; private set; }
+        internal static Lazy<Texture2D> bug_theme { get; private set; }
+        internal static Lazy<Texture2D> cavefly_theme { get; private set; }
+        internal static Lazy<Texture2D> duggy_theme { get; private set; }
+        internal static Lazy<Texture2D> grub_theme { get; private set; }
+        internal static Lazy<Texture2D> rockcrab_theme { get; private set; }
+        internal static Lazy<Texture2D> lavacrab_theme { get; private set; }
+        internal static Lazy<Texture2D> stonegolem_theme { get; private set; }
+        internal static Lazy<Texture2D> dust_theme { get; private set; }
+        internal static Lazy<Texture2D> ghost_theme { get; private set; }
+        internal static Lazy<Texture2D> skeleton_theme { get; private set; }
+        internal static Lazy<Texture2D> metalhead_theme { get; private set; }
+        internal static Lazy<Texture2D> shadowbrute_theme { get; private set; }
+        internal static Lazy<Texture2D> shadowshaman_theme { get; private set; }
+        internal static Lazy<Texture2D> squidkid_theme { get; private set; }
+
+        // Skull Cavern monsters.
+        internal static Lazy<Texture2D> armoredbug_theme { get; private set; }
+        internal static Lazy<Texture2D> carbonghost_theme { get; private set; }
+        internal static Lazy<Texture2D> iridiumbat_theme { get; private set; }
+        internal static Lazy<Texture2D> iridiumcrab_theme { get; private set; }
+        internal static Lazy<Texture2D> mummy_theme { get; private set; }
+        internal static Lazy<Texture2D> pepperrex_theme { get; private set; }
+        internal static Lazy<Texture2D> serpent_theme { get; private set; }
+
+        // Special monsters
+        internal static Lazy<Texture2D> hauntedskull_theme { get; private set; }
+        internal static Lazy<Texture2D> mutantfly_theme { get; private set; }
+        internal static Lazy<Texture2D> mutantgrub_theme { get; private set; }
+
+        // Volcano monsters
+        internal static Lazy<Texture2D> wildernessgolem_theme { get; private set; }
+        internal static Lazy<Texture2D> dwarvishsentry_theme { get; private set; }
+        internal static Lazy<Texture2D> falsemagmacap_theme { get; private set; }
+        internal static Lazy<Texture2D> hothead_theme { get; private set; }
+        internal static Lazy<Texture2D> lavalurk_theme { get; private set; }
+        internal static Lazy<Texture2D> magmaduggy_theme { get; private set; }
+        internal static Lazy<Texture2D> magmasparker_theme { get; private set; }
+        internal static Lazy<Texture2D> magmasprite_theme { get; private set; }
+        internal static Lazy<Texture2D> tigerslime_theme { get; private set; }
+
+        // Hardmode monsters.
+        internal static Lazy<Texture2D> hardmode_bug { get; private set; }
+
+        internal static Lazy<Texture2D> hardmode_crab { get; private set; }
+        internal static Lazy<Texture2D> hardmode_duggy { get; private set; }
+        internal static Lazy<Texture2D> hardmode_dust { get; private set; }
+        internal static Lazy<Texture2D> hardmode_frostbat { get; private set; }
+        internal static Lazy<Texture2D> hardmode_squid { get; private set; }
+        internal static Lazy<Texture2D> hardmode_putridghost { get; private set; }
+        internal static Lazy<Texture2D> hardmode_skeleton { get; private set; }
+        internal static Lazy<Texture2D> hardmode_spider { get; private set; }
+        internal static Lazy<Texture2D> hardmode_lavacrab { get; private set; }
+        internal static Lazy<Texture2D> hardmode_metalhead { get; private set; }
+        internal static Lazy<Texture2D> hardmode_squidkid { get; private set; }
+        internal static Lazy<Texture2D> hardmode_shadowshaman { get; private set; }
+        internal static Lazy<Texture2D> hardmode_stickbug { get; private set; }
 
         private static Lazy<Texture2D> pixelLazy = new(() =>
         {
@@ -72,80 +83,80 @@ namespace MiniBars.Framework.Rendering
 
         internal static Texture2D Pixel => pixelLazy.Value;
 
-        public static void LoadTextures()
+        internal static void LoadTextures()
         {
             IModHelper helper = ModEntry.instance.Helper;
 
             Database.SetThemeForConfig();
 
-            hp_sprite = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Others/hp_sprite.png", ContentSource.ModFolder);
-            default_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Others/default_theme.png", ContentSource.ModFolder);
+            hp_sprite = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Others/hp_sprite.png"));
+            default_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Others/default_theme.png"));
 
             //NORMAL MINES
-            greenslime_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/greenslime_theme.png", ContentSource.ModFolder);
-            blueslime_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/blueslime_theme.png", ContentSource.ModFolder);
-            bat_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/bat_theme.png", ContentSource.ModFolder);
-            frostbat_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/frostbat_theme.png", ContentSource.ModFolder);
-            lavabat_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/lavabat_theme.png", ContentSource.ModFolder);
-            bug_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/bug_theme.png", ContentSource.ModFolder);
-            cavefly_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/cavefly_theme.png", ContentSource.ModFolder);
-            duggy_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/duggy_theme.png", ContentSource.ModFolder);
-            grub_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/grub_theme.png", ContentSource.ModFolder);
-            rockcrab_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/rockcrab_theme.png", ContentSource.ModFolder);
-            lavacrab_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/lavacrab_theme.png", ContentSource.ModFolder);
-            stonegolem_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/stonegolem_theme.png", ContentSource.ModFolder);
-            dust_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/dust_theme.png", ContentSource.ModFolder);
-            ghost_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/ghost_theme.png", ContentSource.ModFolder);
-            skeleton_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/skeleton_theme.png", ContentSource.ModFolder);
-            metalhead_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/metalhead_theme.png", ContentSource.ModFolder);
-            shadowbrute_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/shadowbrute_theme.png", ContentSource.ModFolder);
-            shadowshaman_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/shadowshaman_theme.png", ContentSource.ModFolder);
-            squidkid_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/squidkid_theme.png", ContentSource.ModFolder);
+            greenslime_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/greenslime_theme.png"));
+            blueslime_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/blueslime_theme.png"));
+            bat_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/bat_theme.png"));
+            frostbat_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/frostbat_theme.png"));
+            lavabat_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/lavabat_theme.png"));
+            bug_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/bug_theme.png"));
+            cavefly_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/cavefly_theme.png"));
+            duggy_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/duggy_theme.png"));
+            grub_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/grub_theme.png"));
+            rockcrab_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/rockcrab_theme.png"));
+            lavacrab_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/lavacrab_theme.png"));
+            stonegolem_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/stonegolem_theme.png"));
+            dust_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/dust_theme.png"));
+            ghost_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/ghost_theme.png"));
+            skeleton_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/skeleton_theme.png"));
+            metalhead_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/metalhead_theme.png"));
+            shadowbrute_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/shadowbrute_theme.png"));
+            shadowshaman_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/shadowshaman_theme.png"));
+            squidkid_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Normal_Mines/squidkid_theme.png"));
 
             //SKULL CAVERN
-            armoredbug_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Skull_Cavern/armoredbug_theme.png", ContentSource.ModFolder);
-            carbonghost_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Skull_Cavern/carbonghost_theme.png", ContentSource.ModFolder);
-            iridiumbat_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Skull_Cavern/iridiumbat_theme.png", ContentSource.ModFolder);
-            iridiumcrab_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Skull_Cavern/iridiumcrab_theme.png", ContentSource.ModFolder);
-            mummy_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Skull_Cavern/mummy_theme.png", ContentSource.ModFolder);
-            pepperrex_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Skull_Cavern/pepperrex_theme.png", ContentSource.ModFolder);
-            serpent_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Skull_Cavern/serpent_theme.png", ContentSource.ModFolder);
+            armoredbug_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Skull_Cavern/armoredbug_theme.png"));
+            carbonghost_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Skull_Cavern/carbonghost_theme.png"));
+            iridiumbat_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Skull_Cavern/iridiumbat_theme.png"));
+            iridiumcrab_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Skull_Cavern/iridiumcrab_theme.png"));
+            mummy_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Skull_Cavern/mummy_theme.png"));
+            pepperrex_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Skull_Cavern/pepperrex_theme.png"));
+            serpent_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Skull_Cavern/serpent_theme.png"));
 
             //QUARRY MINE
-            hauntedskull_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Quarry_Mine/hauntedskull_theme.png", ContentSource.ModFolder);
+            hauntedskull_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Quarry_Mine/hauntedskull_theme.png"));
 
             //MUTANT BUG LAIR
-            mutantfly_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Mutant_Bug_Lair/mutantfly_theme.png", ContentSource.ModFolder);
-            mutantgrub_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Mutant_Bug_Lair/mutantgrub_theme.png", ContentSource.ModFolder);
+            mutantfly_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Mutant_Bug_Lair/mutantfly_theme.png"));
+            mutantgrub_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Mutant_Bug_Lair/mutantgrub_theme.png"));
 
             //WILDERNESS
-            wildernessgolem_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Wilderness/wildernessgolem_theme.png", ContentSource.ModFolder);
+            wildernessgolem_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Wilderness/wildernessgolem_theme.png"));
 
             //VOLCANO DUNGEON
-            dwarvishsentry_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Volcano_Dungeon/dwarvishsentry_theme.png", ContentSource.ModFolder);
-            falsemagmacap_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Volcano_Dungeon/falsemagmacap_theme.png", ContentSource.ModFolder);
-            hothead_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Volcano_Dungeon/hothead_theme.png", ContentSource.ModFolder);
-            lavalurk_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Volcano_Dungeon/lavalurk_theme.png", ContentSource.ModFolder);
-            magmaduggy_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Volcano_Dungeon/magmaduggy_theme.png", ContentSource.ModFolder);
-            magmasparker_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Volcano_Dungeon/magmasparker_theme.png", ContentSource.ModFolder);
-            magmasprite_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Volcano_Dungeon/magmasprite_theme.png", ContentSource.ModFolder);
-            tigerslime_theme = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/Volcano_Dungeon/tigerslime_theme.png", ContentSource.ModFolder);
+            dwarvishsentry_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Volcano_Dungeon/dwarvishsentry_theme.png"));
+            falsemagmacap_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Volcano_Dungeon/falsemagmacap_theme.png"));
+            hothead_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Volcano_Dungeon/hothead_theme.png"));
+            lavalurk_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Volcano_Dungeon/lavalurk_theme.png"));
+            magmaduggy_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Volcano_Dungeon/magmaduggy_theme.png"));
+            magmasparker_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Volcano_Dungeon/magmasparker_theme.png"));
+            magmasprite_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Volcano_Dungeon/magmasprite_theme.png"));
+            tigerslime_theme = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/Volcano_Dungeon/tigerslime_theme.png"));
 
             //HARDMODE
-            hardmode_bug = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/HardMode/hardmode_bug.png", ContentSource.ModFolder);
-            hardmode_crab = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/HardMode/hardmode_crab.png", ContentSource.ModFolder);
-            hardmode_duggy = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/HardMode/hardmode_duggy.png", ContentSource.ModFolder);
-            hardmode_dust = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/HardMode/hardmode_dust.png", ContentSource.ModFolder);
-            hardmode_frostbat = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/HardMode/hardmode_frostbat.png", ContentSource.ModFolder);
-            hardmode_squid = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/HardMode/hardmode_squid.png", ContentSource.ModFolder);
-            hardmode_putridghost = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/HardMode/hardmode_putridghost.png", ContentSource.ModFolder);
-            hardmode_skeleton = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/HardMode/hardmode_skeleton.png", ContentSource.ModFolder);
-            hardmode_spider = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/HardMode/hardmode_spider.png", ContentSource.ModFolder);
-            hardmode_lavacrab = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/HardMode/hardmode_lavacrab.png", ContentSource.ModFolder);
-            hardmode_metalhead = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/HardMode/hardmode_metalhead.png", ContentSource.ModFolder);
-            hardmode_squidkid = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/HardMode/hardmode_squidkid.png", ContentSource.ModFolder);
-            hardmode_shadowshaman = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/HardMode/hardmode_shadowshaman.png", ContentSource.ModFolder);
-            hardmode_stickbug = helper.Content.Load<Texture2D>($"assets/{Database.BarTheme}/HardMode/hardmode_stickbug.png", ContentSource.ModFolder);
+            hardmode_bug = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/HardMode/hardmode_bug.png"));
+            hardmode_crab = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/HardMode/hardmode_crab.png"));
+            hardmode_duggy = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/HardMode/hardmode_duggy.png"));
+            hardmode_dust = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/HardMode/hardmode_dust.png"));
+            hardmode_frostbat = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/HardMode/hardmode_frostbat.png"));
+            hardmode_squid = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/HardMode/hardmode_squid.png"));
+            hardmode_putridghost = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/HardMode/hardmode_putridghost.png"));
+            hardmode_skeleton = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/HardMode/hardmode_skeleton.png"));
+            hardmode_spider = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/HardMode/hardmode_spider.png"));
+            hardmode_lavacrab = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/HardMode/hardmode_lavacrab.png"));
+            hardmode_metalhead = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/HardMode/hardmode_metalhead.png"));
+            hardmode_squidkid = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/HardMode/hardmode_squidkid.png"));
+            hardmode_shadowshaman = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/HardMode/hardmode_shadowshaman.png"));
+            hardmode_stickbug = new(() => helper.ModContent.Load<Texture2D>($"assets/{Database.BarTheme}/HardMode/hardmode_stickbug.png"));
         }
     }
 }

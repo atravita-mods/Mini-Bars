@@ -57,8 +57,8 @@ namespace MiniBars.Framework.Rendering
                 
                 
                 if (ModEntry.config.Only_One_Theme)
-                {
-                    _current_sprite = Textures.default_theme;
+                { // skip the rest of the giant elif.
+                    _current_sprite = Textures.default_theme.Value;
                     _border_color = Color.White;
                     _bar_color = new Color(172, 50, 50);
                     _hp_color = new Color(0, 0, 0, 200);
@@ -73,13 +73,13 @@ namespace MiniBars.Framework.Rendering
                     {
                         if (monster.Name == "Frost Jelly")
                         {
-                            _current_sprite = Textures.blueslime_theme;
+                            _current_sprite = Textures.blueslime_theme.Value;
                             _bar_color = new Color(69, 142, 212);
                             _border_color = slime.color.Value;
                         }
                         else if (monster.Name == "Tiger Slime")
                         {
-                            _current_sprite = Textures.tigerslime_theme;
+                            _current_sprite = Textures.tigerslime_theme.Value;
                             _bar_color = new Color(174, 84, 18);
                         }
                         else
@@ -91,7 +91,7 @@ namespace MiniBars.Framework.Rendering
                             byte cA = 255;
                             Color c2 = new((int)cR, (int)cG, (int)cB, cA);
 
-                            _current_sprite = Textures.greenslime_theme;
+                            _current_sprite = Textures.greenslime_theme.Value;
                             _bar_color = c2;
                             _border_color = slime.color.Value;
                         }
@@ -102,60 +102,60 @@ namespace MiniBars.Framework.Rendering
                         {
                             if (bat.isHardModeMonster.Value)
                             {
-                                _current_sprite = Textures.hardmode_frostbat;
+                                _current_sprite = Textures.hardmode_frostbat.Value;
                                 _bar_color = new Color(231, 116, 10);
                             }
                             else
                             {
-                                _current_sprite = Textures.frostbat_theme;
+                                _current_sprite = Textures.frostbat_theme.Value;
                                 _bar_color = new Color(77, 122, 145);
                             }
                         }
                         else if (monster.Name == "Lava Bat")
                         {
-                            _current_sprite = Textures.lavabat_theme;
+                            _current_sprite = Textures.lavabat_theme.Value;
                             _bar_color = new Color(190, 23, 23);
                         }
                         else if (monster.Name == "Magma Sprite")
                         {
-                            _current_sprite = Textures.magmasprite_theme;
+                            _current_sprite = Textures.magmasprite_theme.Value;
                             _bar_color = new Color(255, 204, 51);
                         }
                         else if (monster.Name == "Magma Sparker")
                         {
-                            _current_sprite = Textures.magmasparker_theme;
+                            _current_sprite = Textures.magmasparker_theme.Value;
                             _bar_color = new Color(221, 250, 117);
                         }
                         else if (monster.Name == "Iridium Bat")
                         {
-                            _current_sprite = Textures.iridiumbat_theme;
+                            _current_sprite = Textures.iridiumbat_theme.Value;
                             _bar_color = new Color(226, 72, 205);
                         }
                         else if (monster.Name == "Haunted Skull")
                         {
-                            _current_sprite = Textures.hauntedskull_theme;
+                            _current_sprite = Textures.hauntedskull_theme.Value;
                             _bar_color = new Color(172, 172, 172);
                             _hp_color = Color.Red;
                         }
                         else
                         {
-                            _current_sprite = Textures.bat_theme;
+                            _current_sprite = Textures.bat_theme.Value;
                         }
                     }
                     else if (monster is Bug bug)
                     {
                         if (bug.isArmoredBug.Value)
                         {
-                            _current_sprite = Textures.armoredbug_theme;
+                            _current_sprite = Textures.armoredbug_theme.Value;
                         }
                         else if (bug.isHardModeMonster.Value)
                         {
-                            _current_sprite = Textures.hardmode_bug;
+                            _current_sprite = Textures.hardmode_bug.Value;
                             _bar_color = new Color(0, 127, 199);
                         }
                         else
                         {
-                            _current_sprite = Textures.bug_theme;
+                            _current_sprite = Textures.bug_theme.Value;
                             _bar_color = new Color(130, 199, 171);
                         }
                         _height = 15;
@@ -164,12 +164,12 @@ namespace MiniBars.Framework.Rendering
                     {
                         if (Game1.player.currentLocation.Name == "BugLand" || Game1.CurrentMineLevel > 120)
                         {
-                            _current_sprite = Textures.mutantfly_theme;
+                            _current_sprite = Textures.mutantfly_theme.Value;
                             _bar_color = new Color(0, 194, 31);
                         }
                         else
                         {
-                            _current_sprite = Textures.cavefly_theme;
+                            _current_sprite = Textures.cavefly_theme.Value;
                             _bar_color = new Color(207, 43, 156);
                         }
                     }
@@ -177,29 +177,29 @@ namespace MiniBars.Framework.Rendering
                     {
                         if (monster.Name == "Magma Duggy")
                         {
-                            _current_sprite = Textures.magmaduggy_theme;
+                            _current_sprite = Textures.magmaduggy_theme.Value;
                             _bar_color = new Color(246, 59, 59);
                         }
                         else if (duggy.isHardModeMonster.Value)
                         {
-                            _current_sprite = Textures.hardmode_duggy;
+                            _current_sprite = Textures.hardmode_duggy.Value;
                             _bar_color = new Color(50, 99, 172);
                         }
                         else
                         {
-                            _current_sprite = Textures.duggy_theme;
+                            _current_sprite = Textures.duggy_theme.Value;
                         }
                     }
                     else if (monster is Grub)
                     {
                         if (Game1.player.currentLocation.Name == "BugLand" || Game1.CurrentMineLevel > 120)
                         {
-                            _current_sprite = Textures.mutantgrub_theme;
+                            _current_sprite = Textures.mutantgrub_theme.Value;
                             _bar_color = new Color(75, 242, 63);
                         }
                         else
                         {
-                            _current_sprite = Textures.grub_theme;
+                            _current_sprite = Textures.grub_theme.Value;
                             _bar_color = new Color(255, 215, 135);
                         }
                     }
@@ -215,18 +215,18 @@ namespace MiniBars.Framework.Rendering
                             if (crab.isHardModeMonster.Value)
                             {
 
-                                _current_sprite = Textures.hardmode_lavacrab;
+                                _current_sprite = Textures.hardmode_lavacrab.Value;
                                 _bar_color = new Color(135, 17, 168);
                             }
                             else
                             {
-                                _current_sprite = Textures.lavacrab_theme;
+                                _current_sprite = Textures.lavacrab_theme.Value;
                                 _bar_color = new Color(172, 50, 101);
                             }
                         }
                         else if (monster.Name == "Iridium Crab")
                         {
-                            _current_sprite = Textures.iridiumcrab_theme;
+                            _current_sprite = Textures.iridiumcrab_theme.Value;
                             _bar_color = new Color(226, 72, 205);
                         }
                         else
@@ -235,18 +235,18 @@ namespace MiniBars.Framework.Rendering
                             {
                                 if (monster.Name == "Stick Bug")
                                 {
-                                    _current_sprite = Textures.hardmode_stickbug;
+                                    _current_sprite = Textures.hardmode_stickbug.Value;
                                     _bar_color = new Color(139, 65, 0);
                                 }
                                 else
                                 {
-                                    _current_sprite = Textures.hardmode_crab;
+                                    _current_sprite = Textures.hardmode_crab.Value;
                                     _bar_color = new Color(46, 74, 116);
                                 }
                             }
                             else
                             {
-                                _current_sprite = Textures.rockcrab_theme;
+                                _current_sprite = Textures.rockcrab_theme.Value;
                             }
                         }
                     }
@@ -259,12 +259,12 @@ namespace MiniBars.Framework.Rendering
 
                         if (golem.wildernessFarmMonster)
                         {
-                            _current_sprite = Textures.wildernessgolem_theme;
+                            _current_sprite = Textures.wildernessgolem_theme.Value;
                             _bar_color = new Color(78, 62, 41);
                         }
                         else
                         {
-                            _current_sprite = Textures.stonegolem_theme;
+                            _current_sprite = Textures.stonegolem_theme.Value;
                             _bar_color = new Color(121, 121, 121);
                         }
                     }
@@ -272,12 +272,12 @@ namespace MiniBars.Framework.Rendering
                     {
                         if (dust.isHardModeMonster.Value)
                         {
-                            _current_sprite = Textures.hardmode_dust;
+                            _current_sprite = Textures.hardmode_dust.Value;
                             _bar_color = new Color(255, 255, 255);
                         }
                         else
                         {
-                            _current_sprite = Textures.dust_theme;
+                            _current_sprite = Textures.dust_theme.Value;
                             _bar_color = new Color(86, 88, 104);
                         }
                     }
@@ -285,12 +285,12 @@ namespace MiniBars.Framework.Rendering
                     {
                         if (monster.Name == "Putrid Ghost")
                         {
-                            _current_sprite = Textures.hardmode_putridghost;
+                            _current_sprite = Textures.hardmode_putridghost.Value;
                             _bar_color = new Color(164, 238, 135);
                         }
                         else
                         {
-                            _current_sprite = Textures.ghost_theme;
+                            _current_sprite = Textures.ghost_theme.Value;
                             _bar_color = new Color(197, 238, 155);
                         }
                     }
@@ -298,12 +298,12 @@ namespace MiniBars.Framework.Rendering
                     {
                         if (skeleton.isHardModeMonster.Value)
                         {
-                            _current_sprite = Textures.hardmode_skeleton;
+                            _current_sprite = Textures.hardmode_skeleton.Value;
                             _bar_color = new Color(207, 250, 255);
                         }
                         else
                         {
-                            _current_sprite = Textures.skeleton_theme;
+                            _current_sprite = Textures.skeleton_theme.Value;
                             _bar_color = new Color(255, 255, 255);
                         }
                     }
@@ -311,19 +311,19 @@ namespace MiniBars.Framework.Rendering
                     {
                         if (monster.Name == "Hot Head")
                         {
-                            _current_sprite = Textures.hothead_theme;
+                            _current_sprite = Textures.hothead_theme.Value;
                             _bar_color = new Color(255, 93, 43);
                         }
                         else
                         {
                             if (metalhead.isHardModeMonster.Value)
                             {
-                                _current_sprite = Textures.hardmode_metalhead;
+                                _current_sprite = Textures.hardmode_metalhead.Value;
                                 _bar_color = new Color(60, 60, 60);
                             }
                             else
                             {
-                                _current_sprite = Textures.metalhead_theme;
+                                _current_sprite = Textures.metalhead_theme.Value;
                                 _bar_color = new Color(220, 123, 5);
                             }
                         }
@@ -331,19 +331,19 @@ namespace MiniBars.Framework.Rendering
                     }
                     else if (monster is ShadowBrute)
                     {
-                        _current_sprite = Textures.shadowbrute_theme;
+                        _current_sprite = Textures.shadowbrute_theme.Value;
                         _bar_color = new Color(52, 52, 52);
                     }
                     else if (monster is ShadowShaman shadowshaman)
                     {
                         if (shadowshaman.isHardModeMonster.Value)
                         {
-                            _current_sprite = Textures.hardmode_shadowshaman;
+                            _current_sprite = Textures.hardmode_shadowshaman.Value;
                             _bar_color = new Color(98, 164, 59);
                         }
                         else
                         {
-                            _current_sprite = Textures.shadowshaman_theme;
+                            _current_sprite = Textures.shadowshaman_theme.Value;
                             _bar_color = new Color(98, 164, 59);
                         }
                     }
@@ -351,65 +351,65 @@ namespace MiniBars.Framework.Rendering
                     {
                         if (squidkid.isHardModeMonster.Value)
                         {
-                            _current_sprite = Textures.hardmode_squidkid;
+                            _current_sprite = Textures.hardmode_squidkid.Value;
                             _bar_color = new Color(255, 189, 94);
                         }
                         else
                         {
-                            _current_sprite = Textures.squidkid_theme;
+                            _current_sprite = Textures.squidkid_theme.Value;
                             _bar_color = new Color(255, 145, 130);
                         }
                     }
                     else if (monster is Mummy)
                     {
-                        _current_sprite = Textures.mummy_theme;
+                        _current_sprite = Textures.mummy_theme.Value;
                         _bar_color = new Color(225, 203, 101);
                     }
                     else if (monster is DinoMonster)
                     {
-                        _current_sprite = Textures.pepperrex_theme;
+                        _current_sprite = Textures.pepperrex_theme.Value;
                         _bar_color = new Color(137, 180, 56);
                     }
                     else if (monster is Serpent)
                     {
-                        _current_sprite = Textures.serpent_theme;
+                        _current_sprite = Textures.serpent_theme.Value;
                         _bar_color = new Color(82, 251, 163);
                         _height = -5;
                     }
                     else if (monster is DwarvishSentry)
                     {
-                        _current_sprite = Textures.dwarvishsentry_theme;
+                        _current_sprite = Textures.dwarvishsentry_theme.Value;
                         _bar_color = new Color(172, 112, 105);
                         _height = 14;
                     }
                     else if (monster is LavaLurk)
                     {
-                        _current_sprite = Textures.lavalurk_theme;
+                        _current_sprite = Textures.lavalurk_theme.Value;
                         _bar_color = new Color(220, 123, 5);
                     }
                     else if (monster is BlueSquid)
                     {
-                        _current_sprite = Textures.hardmode_squid;
+                        _current_sprite = Textures.hardmode_squid.Value;
                         _bar_color = new Color(160, 210, 255);
                     }
                     else if (monster is Shooter)
                     {
-                        _current_sprite = Textures.shadowbrute_theme;
+                        _current_sprite = Textures.shadowbrute_theme.Value;
                         _bar_color = new Color(52, 52, 52);
                     }
                     else if (monster.Name == "False Magma Cap")
                     {
-                        _current_sprite = Textures.falsemagmacap_theme;
+                        _current_sprite = Textures.falsemagmacap_theme.Value;
                         _bar_color = new Color(255, 242, 201);
                     }
                     else if (monster.Name == "Spider")
                     {
-                        _current_sprite = Textures.hardmode_spider;
+                        _current_sprite = Textures.hardmode_spider.Value;
                         _bar_color = new Color(102, 209, 169);
                     }
                     else
                     {
-                        _current_sprite = Textures.default_theme;
+                        _current_sprite = Textures.default_theme.Value;
                     }
 
                     if (Game1.player.currentLocation.Name == "CrimsonBadlands" || Game1.player.currentLocation.Name == "IridiumQuarry")
@@ -453,12 +453,12 @@ namespace MiniBars.Framework.Rendering
                     if (ModEntry.config.Bars_Theme == 2)
                         continue;
                     Game1.spriteBatch.Draw(
-                    Textures.hp_sprite,
+                    Textures.hp_sprite.Value,
                     new Rectangle(
-                        (int)_monsterPos.X - (Textures.hp_sprite.Width * Game1.pixelZoom) / 2 + (monster.Sprite.SpriteWidth * Game1.pixelZoom) / 2,
+                        (int)_monsterPos.X - (Textures.hp_sprite.Value.Width * Game1.pixelZoom) / 2 + (monster.Sprite.SpriteWidth * Game1.pixelZoom) / 2,
                         (int)_monsterPos.Y - monster.Sprite.SpriteHeight * Game1.pixelZoom - _height * Game1.pixelZoom,
-                        Textures.hp_sprite.Width * Game1.pixelZoom,
-                        Textures.hp_sprite.Height * Game1.pixelZoom),
+                        Textures.hp_sprite.Value.Width * Game1.pixelZoom,
+                        Textures.hp_sprite.Value.Height * Game1.pixelZoom),
                     _hp_color);
                 }
                 else
@@ -467,7 +467,7 @@ namespace MiniBars.Framework.Rendering
                     Game1.spriteBatch.DrawString(
                         Game1.tinyFont,
                         monster.Health.ToString(),
-                        new Vector2((int)_monsterPos.X - (Textures.hp_sprite.Width * Game1.pixelZoom) / 2 + (monster.Sprite.SpriteWidth * Game1.pixelZoom) / 2 + 13 * Game1.pixelZoom,
+                        new Vector2((int)_monsterPos.X - (Textures.hp_sprite.Value.Width * Game1.pixelZoom) / 2 + (monster.Sprite.SpriteWidth * Game1.pixelZoom) / 2 + 13 * Game1.pixelZoom,
                             (int)_monsterPos.Y - monster.Sprite.SpriteHeight * Game1.pixelZoom - _height * Game1.pixelZoom + 10 * Game1.pixelZoom),
                         _hp_color,
                         0f,

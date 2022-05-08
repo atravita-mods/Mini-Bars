@@ -2,14 +2,11 @@
   <PropertyGroup>
     <Version>1.0.3-unofficial</Version>
     <TargetFramework>net5.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Leclair.Stardew.ModManifestBuilder" Version="1.0.3" />
     <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Properties\" />
   </ItemGroup>
 </Project>
